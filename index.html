@@ -1,17 +1,15 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
-  </head>
-  <body>
-    <a-scene arjs vr-mode-ui="enabled: false">
-      <a-box position="0 5 5" rotation="0 45 0" color="#4CC3D9" gps-new-entity-place="latitude: 59.715692; longitude: 30.413323"></a-box>
-
-      <a-sphere position="0 2 0" color="red" gps-new-entity-place="latitude: 59.715539; longitude: 30.413225"></a-sphere>
-
-      <a-cone position="0 0 5" color="gold" gps-new-entity-place="latitude: 59.715710; longitude: 30.413764"></a-cone>
-      
-      <a-camera gps-new-camera></a-camera>
-    </a-scene>
-  </body>
+<head>
+  <title>AR.js A-Frame Location-based</title>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+  <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+</head>
+<body>
+  <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+      <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+      <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 59.715370; longitude: 30.414036" scale="10 10 10"></a-entity>
+  </a-scene>
+</body>
 </html>
