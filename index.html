@@ -7,9 +7,9 @@
   <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
 </head>
 <body>
-  <a-scene vr-mode-ui='enabled: false' arjs>
+  <a-scene vr-mode-ui='enabled: false' arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
       <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
-      <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 59.715703; longitude: 30.414217" scale="10 10 10"></a-entity>
+      <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 59.715703; longitude: 30.414217" scale="10 10 10" position="0 10 0"></a-entity>
   </a-scene>
 </body>
 </html>
